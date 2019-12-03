@@ -21,11 +21,15 @@ def evaluate(noun, verb):
     return t[0]
 
 
+print(" Day 2 ".center(64, "-"))
+
 # Part 1
-print(f"Output after code 1202: {evaluate(12, 2)}")
+print(f"Output after code 1202: {evaluate(12, 2)}".center(64))
 
 # Part 2
 for x in range(100):
     for y in range(100):
         if evaluate(x, y) == 19690720:
-            print(f"Checksum: {100 * x + y}")
+            print(f"Checksum: {100 * x + y}".center(64))
+
+print("".center(64, "-"))
