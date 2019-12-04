@@ -15,12 +15,12 @@ def evaluate(noun, verb):
         elif op == 2:
             t[i3] = t[i1] * t[i2]
         else:
-            assert op == 99
             break
         c += 4
     return t[0]
 
 
+# Pretty print
 print(" Day 2 ".center(64, "-"))
 
 # Part 1
@@ -32,4 +32,5 @@ for x in range(100):
         if evaluate(x, y) == 19690720:
             print(f"Checksum: {100 * x + y}".center(64))
 
+# More pretty print
 print("".center(64, "-"))

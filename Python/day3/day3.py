@@ -1,4 +1,6 @@
 
+from matplotlib import pyplot as plt
+
 # Parse inputs
 wire1 = [[x[0], int(x[1:])] for x in open("wire1.txt").read().split(",")]
 wire2 = [[x[0], int(x[1:])] for x in open("wire2.txt").read().split(",")]
@@ -35,6 +37,13 @@ both = set(path1.keys()) & set(path2.keys())
 part1 = min([abs(x) + abs(y) for (x, y) in both])
 # Shortest path to any intersection
 part2 = min([path1[p] + path2[p] for p in both])
+
+plt.scatter([x[0] for x in path1.keys()], [x[1] for x in path1.keys()], s=1)
+plt.scatter([x[0] for x in path2.keys()], [x[1] for x in path2.keys()], s=1)
+plt.scatter([x[0] for x in both], [x[1] for x in both], marker='x', c='chartreuse')
+# plt.scatter(0, 0, c='red', marker='o')
+plt.show()
+# plt.savefig('day3.png')
 
 print(" Day 3 ".center(64, "-"))
 print(f"Distance to intersection closest to central port: {part1}".center(64))
