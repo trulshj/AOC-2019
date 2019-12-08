@@ -3,7 +3,6 @@ code = [int(x) for x in open("input.txt").read().split(',')]
 i = 0
 input_code = 5
 
-
 while True:
     op = code[i]
     modes = []
