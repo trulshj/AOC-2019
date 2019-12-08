@@ -7,14 +7,7 @@ def get_fuel(mass)
   mass / 3 - 2
 end
 
-fuel_requierment = 0
-
-masses.each do |mass|
-  fuel_requierment += get_fuel(mass)
-end
-
-part1 = fuel_requierment
-
+part1 = masses.reduce(0) { |sum, mass| sum + get_fuel(mass)}
 
 fuel_requierment = 0
 masses.each do |mass|
