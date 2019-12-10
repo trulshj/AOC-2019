@@ -40,10 +40,9 @@ x = start
 (start..stop).step(10) do |n|
   x += 10.0
   print ("Checking: #{n} - #{(100*(x/stop)).round}% done...".center(64)) + "\r"
+  sleep 0.000001
   if x >= stop
-    sleep 0.3
     puts "Checking: #{n} - #{(100*(x/stop)).round}% done...".center(64)
-    puts "Checked #{stop-start} passwords - 100% done".center(64)
     puts ""
   end
 end

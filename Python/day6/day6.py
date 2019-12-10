@@ -51,7 +51,7 @@ while True:
         visited_you.append(you)
         you = planets[you[0]]
 
-print("".center(64, '-'))
+print(" Day 6 ".center(64, '-'))
 print(f"Total number of direct and indirect orbits: {part1}".center(64))
 print(f"Total number of gravity transfers needed: {part2}".center(64))
 print("".center(64, '-'))
